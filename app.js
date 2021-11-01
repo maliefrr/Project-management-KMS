@@ -1,8 +1,14 @@
 import express from "express";
 import router from "./routes/router.js";
+import expressLayouts from "express-ejs-layouts";
 
 const app = express();
 
+// setting template engine
+app.set("view engine", "ejs");
+app.use(expressLayouts);
+
+// load route file
 app.use(router);
 
 const PORT = process.env.PORT || 5000;

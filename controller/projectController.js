@@ -1,3 +1,5 @@
 export const showAllProject = (req, res) => {
-	res.send("Success");
+	res.render("index", {
+		layout: "layouts/main-layout",
+	});
 };
