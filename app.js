@@ -1,6 +1,7 @@
 import express from "express";
 import router from "./routes/router.js";
 import expressLayouts from "express-ejs-layouts";
+import connectDb from "./config/db.js";
 
 const app = express();
 
@@ -8,6 +9,9 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.use(express.static("public"));
+
+// database connection
+connectDb();
 
 // load route file
 app.use(router);
