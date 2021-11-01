@@ -3,3 +3,9 @@ export const showAllProject = (req, res) => {
 		layout: "layouts/main-layout",
 	});
 };
+
+export const getAddNew = (req, res) => {
+	res.render("add", {
+		layout: "layouts/main-layout",
+	});
+};
