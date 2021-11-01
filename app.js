@@ -7,6 +7,7 @@ const app = express();
 // setting template engine
 app.set("view engine", "ejs");
 app.use(expressLayouts);
+app.use(express.static("public"));
 
 // load route file
 app.use(router);
