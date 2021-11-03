@@ -2,11 +2,19 @@
 	<a href="/add" class="btn btn-success">Add New</a>
 	<table class="table">
 		<thead>
+			<% if (success.length > 0) { %>
+			<tr>
+				<div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+					<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
+					<div><%= success %></div>
+				</div>
+			</tr>
+			<% } %>
 			<tr>
 				<th scope="col">#</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
+				<th scope="col">Divisi</th>
+				<th scope="col">Overall Progress</th>
+				<th scope="col">Aksi</th>
 			</tr>
 		</thead>
 		<tbody>

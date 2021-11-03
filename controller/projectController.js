@@ -1,8 +1,11 @@
 import prokerModel from "../models/proker.js";
 
-export const showAllProject = (req, res) => {
+export const showAllProject = async (req, res) => {
+	const proker = prokerModel.find();
 	res.render("index", {
 		layout: "layouts/main-layout",
+		success: req.flash("success"),
+		proker,
 	});
 };
 
@@ -13,11 +16,8 @@ export const getAddNew = (req, res) => {
 };
 
 export const postList = (req, res) => {
-	const { proker, divisi, pj, status } = req.body;
-	res.json({
-		proker,
-		divisi,
-		pj,
-		status,
+	prokerModel.insertMany(req.body, (err, result) => {
+		req.flash("success", "Data Berhasil ditambahkan");
+		res.redirect("/");
 	});
 };
