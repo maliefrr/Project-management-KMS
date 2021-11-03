@@ -5,12 +5,23 @@
 			<h2 class="text-center mb-2">Add new</h2>
 			<form action="/" method="POST">
 				<div class="mb-3">
+					<label for="divisi" class="form-label">Divisi</label>
+					<input type="text" class="form-control" id="divisi" name="divisi" />
+				</div>
+				<div class="mb-3">
 					<label for="proker" class="form-label">Program Kerja</label>
 					<input type="text" class="form-control" id="proker" name="proker" />
 				</div>
 				<div class="mb-3">
-					<label for="divisi" class="form-label">Divisi</label>
-					<input type="text" class="form-control" id="divisi" name="divisi" />
+					<label for="pj" class="form-label">Penanggung Jawab</label>
+					<input type="text" class="form-control" id="pj" name="pj" />
+				</div>
+				<div class="mb-3 mt-1">
+					<select class="form-select" aria-label="Default select example" name="status">
+						<option selected>Status</option>
+						<option value="0">Selesai</option>
+						<option value="1">Belum Selesai</option>
+					</select>
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>

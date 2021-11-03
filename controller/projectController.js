@@ -11,9 +11,11 @@ export const getAddNew = (req, res) => {
 };
 
 export const postList = (req, res) => {
-	const { proker, divisi } = req.body;
+	const { proker, divisi, pj, status } = req.body;
 	res.json({
 		proker,
 		divisi,
+		pj,
+		status,
 	});
 };
