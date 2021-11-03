@@ -6,7 +6,15 @@
 			<form action="/" method="POST">
 				<div class="mb-3">
 					<label for="divisi" class="form-label">Divisi</label>
-					<input type="text" class="form-control" id="divisi" name="divisi" />
+					<select class="form-select" aria-label="Default select example" name="divisi" id="divisi">
+						<option selected disabled="true">Pilih Divisi</option>
+						<option value="kerohanian">Kerohanian</option>
+						<option value="kewirausahaan">Kewirausahaan</option>
+						<option value="minat bakat">Minat & Bakat</option>
+						<option value="pendidikan">Pendidikan</option>
+						<option value="TIK">TIK</option>
+						<option value="sekretariat">Sekretariat</option>
+					</select>
 				</div>
 				<div class="mb-3">
 					<label for="proker" class="form-label">Program Kerja</label>
@@ -17,8 +25,9 @@
 					<input type="text" class="form-control" id="pj" name="pj" />
 				</div>
 				<div class="mb-3 mt-1">
-					<select class="form-select" aria-label="Default select example" name="status">
-						<option selected>Status</option>
+					<label for="status" class="form-label">Status</label>
+					<select class="form-select" aria-label="Default select example" name="status" id>
+						<option selected disabled="true">Pilih Status</option>
 						<option value="0">Selesai</option>
 						<option value="1">Belum Selesai</option>
 					</select>

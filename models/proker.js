@@ -20,4 +20,6 @@ const prokerSchema = new schema({
 	},
 });
 
-export const user = mongoose.model("Proker", prokerSchema);
+const user = mongoose.model("Proker", prokerSchema);
+
+export default user;
