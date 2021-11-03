@@ -13,6 +13,9 @@ app.use(express.static("public"));
 // database connection
 connectDb();
 
+// middleware
+app.use(express.urlencoded({ extended: false }));
+
 // load route file
 app.use(router);
 

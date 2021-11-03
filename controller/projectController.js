@@ -9,3 +9,11 @@ export const getAddNew = (req, res) => {
 		layout: "layouts/main-layout",
 	});
 };
+
+export const postList = (req, res) => {
+	const { proker, divisi } = req.body;
+	res.json({
+		proker,
+		divisi,
+	});
+};
